@@ -9,7 +9,7 @@
   --font-size-xs: ;
   --line-heigt: 1;
 
-  /* COLORS RELATED VARIABLES: */
+  /* COLORS PRIMARY VARIABLES: */
   --color-primary-50: #f1f8fa;
   --color-primary-100: #dcedf1;
   --color-primary-200: #bddbe4;
@@ -21,7 +21,21 @@
   --color-primary-800: #2f4b5b;
   --color-primary-900: #2b414e;
   --color-primary-950: #182934;
+
+  /* COLOR WHITE VARIABLES: */
   --color-pure-white: #fff;
+  --color-white-darken1: #efefef;
+  --color-white-darken2: #dcdcdc;
+  --color-white-darken3: #bdbdbd;
+
+  /* COLOR BLACK VARIALBES */
+  --color-pure-black: #000;
+  --color-black-light1: #3d3d3d;
+  --color-black-light2: #454545;
+  --color-black-light3: #4f4f4f;
+  --color-black-light4: #5d5d5d;
+  --color-black-light5: #6d6d6d;
+  --color-black-light6: #888;
 
   /* OTHER VARIABLES: */
   --border-radius-sm: 4px;
