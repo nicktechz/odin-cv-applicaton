@@ -1,6 +1,41 @@
 :root {
+  /* FONTS RELATED VARIABLES: */
+  --font-family: "Satoshi", san-serif;
+  --font-size-xxl: ;
+  --font-size-xl: ;
+  --font-size-lg: ;
+  --font-size-md: ;
+  --font-size-sm: ;
+  --font-size-xs: ;
+  --line-heigt: 1;
+
+  /* COLORS RELATED VARIABLES: */
+  --color-primary-50: #f1f8fa;
+  --color-primary-100: #dcedf1;
+  --color-primary-200: #bddbe4;
+  --color-primary-300: #8fc2d1;
+  --color-primary-400: #6aa9be;
+  --color-primary-500: #3e839c;
+  --color-primary-600: #366c84;
+  --color-primary-700: #31596d;
+  --color-primary-800: #2f4b5b;
+  --color-primary-900: #2b414e;
+  --color-primary-950: #182934;
+  --color-pure-white: #fff;
+
+  /* OTHER VARIABLES: */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --box-shadow-black-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --box-shadow-black-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --box-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
 }
 
 html {
-  font-family: "Satoshi", serif;
+  font-family: var(--font-family);
+  line-height: var(--line-heigt);
+  font-size: var(--font-size-xxl);
 }

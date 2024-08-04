@@ -12,8 +12,15 @@
   margin: 0;
 }
 body {
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
+a {
+  text-decoration: none;
+  color: initial;
 }
 img,
 picture,
