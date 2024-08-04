@@ -1,0 +1,49 @@
+.btn {
+  padding: 8px 12px;
+  border-radius: var(--border-radius-lg);
+}
+.btn--primary {
+  background-color: var(--color-primary-800);
+}
+.btn--primary:hover {
+  background-image: linear-gradient(
+    125deg,
+    hsl(200deg 38% 31%) 0%,
+    hsl(200deg 38% 31%) 7%,
+    hsl(200deg 39% 32%) 13%,
+    hsl(200deg 39% 32%) 19%,
+    hsl(200deg 39% 33%) 25%,
+    hsl(199deg 39% 33%) 31%,
+    hsl(199deg 40% 33%) 37%,
+    hsl(199deg 40% 34%) 43%,
+    hsl(199deg 40% 34%) 49%,
+    hsl(199deg 41% 35%) 55%,
+    hsl(199deg 41% 35%) 62%,
+    hsl(199deg 41% 35%) 70%,
+    hsl(199deg 41% 36%) 78%,
+    hsl(199deg 42% 36%) 88%,
+    hsl(198deg 42% 36%) 100%
+  );
+  cursor: pointer;
+}
+.btn--primary > a {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-pure-white);
+}
+.btn--black {
+  background-color: var(--color-pure-black);
+  transition: 0.2s all;
+}
+.btn--black:hover {
+  background-color: var(--color-black-light1);
+}
+.btn--black a {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  color: var(--color-pure-white);
+}
+.btn--black svg {
+  margin-right: 4px;
+}
