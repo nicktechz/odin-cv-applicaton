@@ -40,7 +40,7 @@ export default function Header() {
           </ul>
         </section>
         <section>
-          <Button text="Download PDF" onClick={showModal} />
+          <Button text="Create an account" onClick={showModal} />
         </section>
       </div>
     </nav>
