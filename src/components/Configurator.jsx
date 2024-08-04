@@ -1,6 +1,7 @@
 import "../styles/components/Configurator.css";
+import "../styles/components/Cv.css";
 import Button from "./Button";
-export default function Configurator() {
+export default function Configurator({ basicInfo, onChange, keyChange }) {
   return (
     <section className="configurator">
       <h2 className="configuratorTitle">Customization:</h2>
@@ -24,7 +25,11 @@ export default function Configurator() {
             <label htmlFor="">
               First name: <span className="requiredIcon">*</span>
             </label>
-            <input type="text" />
+            <input
+              type="text"
+              onChange={onChange}
+              value={basicInfo.firstName}
+            />
           </div>
           <div>
             <label htmlFor="">

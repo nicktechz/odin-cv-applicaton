@@ -1,5 +1,5 @@
 import "../styles/components/Cv.css";
-export default function Cv({ basicInfo }) {
+export default function Cv({ basicInfo, onChange, keyChange }) {
   return (
     <section className="cvBox">
       <header className="cvHeader">

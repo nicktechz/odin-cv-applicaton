@@ -26,11 +26,16 @@
   height: auto;
   margin-right: 12px;
 }
+
 .cvContactDetail {
   font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 4px;
+}
+.cvContactDetail:last-child {
+  margin-bottom: 0px;
 }
 .cvContactItem {
   margin-left: auto;
