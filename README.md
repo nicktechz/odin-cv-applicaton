@@ -1,1 +1,1 @@
-# odin-cv-applicaton
+# CV BUILDER APPLICATION
