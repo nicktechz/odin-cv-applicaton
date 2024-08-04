@@ -10,6 +10,7 @@
   --line-heigt: 1;
 
   /* COLORS PRIMARY VARIABLES: */
+  --color-primary-extra-light: #fafdfe;
   --color-primary-50: #f1f8fa;
   --color-primary-100: #dcedf1;
   --color-primary-200: #bddbe4;
@@ -37,6 +38,9 @@
   --color-black-light5: #6d6d6d;
   --color-black-light6: #888;
 
+  /* OTHER PURPOSES COLOR */
+  --color-info: #bae6fd;
+
   /* OTHER VARIABLES: */
   --border-radius-sm: 4px;
   --border-radius-md: 8px;
@@ -52,4 +56,9 @@ html {
   font-family: var(--font-family);
   line-height: var(--line-heigt);
   font-size: var(--font-size-xxl);
+}
+body {
+  background-color: var(--color-primary-extra-light);
+  position: relative;
+  padding-bottom: 60px;
 }

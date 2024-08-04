@@ -1,9 +1,19 @@
 import Button from "./Button";
 import "../styles/components/Header.css";
+import Alert from "./Alert";
+import { useState } from "react";
 
 export default function Header() {
+  const [modalActive, setModalActive] = useState(false);
+  function showModal() {
+    setModalActive(true);
+    setTimeout(() => {
+      setModalActive(false);
+    }, 5000);
+  }
   return (
     <nav className="header">
+      <Alert isActive={modalActive} />
       <div className="headerWraper">
         <section className="headerFirstSection">
           <div>
@@ -16,15 +26,21 @@ export default function Header() {
               <a href="">Creator</a>
             </li>
             <li>
-              <a href="">Repository</a>
+              <a
+                href="https://github.com/nicktechz/odin-cv-applicaton"
+                target="_blank"
+                rel="noopen noreferrer"
+              >
+                Repository
+              </a>
             </li>
             <li>
-              <a href="">Contact</a>
+              <a href="mailto:nicolasrueda0510@gmail.com">Contact</a>
             </li>
           </ul>
         </section>
         <section>
-          <Button text="Download PDF" />
+          <Button text="Download PDF" onClick={showModal} />
         </section>
       </div>
     </nav>

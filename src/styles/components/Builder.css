@@ -1,0 +1,7 @@
+.builder {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 24px 0px;
+  display: flex;
+  gap: 24px;
+}

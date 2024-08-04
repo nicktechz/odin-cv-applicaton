@@ -9,7 +9,11 @@ export default function Footer() {
         </section>
         <section>
           <button className="btn btn--black">
-            <a href="">
+            <a
+              href="https://github.com/nicktechz/odin-cv-applicaton"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="icon icon-github"

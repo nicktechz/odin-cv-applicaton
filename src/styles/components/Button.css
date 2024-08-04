@@ -1,4 +1,6 @@
 .btn {
+  font-weight: 600;
+  font-size: 14px;
   padding: 8px 12px;
   border-radius: var(--border-radius-lg);
 }
@@ -27,8 +29,6 @@
   cursor: pointer;
 }
 .btn--primary > a {
-  font-weight: 600;
-  font-size: 14px;
   color: var(--color-pure-white);
 }
 .btn--black {
@@ -39,7 +39,6 @@
   background-color: var(--color-black-light1);
 }
 .btn--black a {
-  font-weight: 600;
   display: flex;
   align-items: center;
   color: var(--color-pure-white);

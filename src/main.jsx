@@ -5,11 +5,13 @@ import "./styles/fonts.css";
 import "./styles/index.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Builder from "./components/Builder";
+import Alert from "./components/Alert";
 
 ReactDOM.createRoot(document.getElementById("app")).render(
   <React.StrictMode>
     <Header />
-    <h1>Hola mundo</h1>
+    <Builder />
     <Footer />
   </React.StrictMode>
 );
