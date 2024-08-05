@@ -6,23 +6,33 @@ export default function Cv({ basicInfo, onChange, keyChange }) {
         <div className="cvHeaderBasicInfo">
           <img src="src/assets/icons/userMan.svg" alt="" className="cvAvatar" />
           <div>
-            <h3>Nicolas Rueda 🇨🇴</h3>
-            <span>Full Stack Engineer</span>
+            <h3>
+              {basicInfo.firstName ? basicInfo.firstName : "John"}{" "}
+              {basicInfo.firstName ? basicInfo.lastName : "Doe"}
+            </h3>
+            <span>{basicInfo.job ? basicInfo.job : "Full Stack Engineer"}</span>
           </div>
         </div>
         <div className="cvHeaderContactInfo">
           <div className="cvContactDetail">
-            <span className="cvContactItem">nicolasrueda0510@gmail.com</span>
+            <span className="cvContactItem">
+              {basicInfo.email ? basicInfo.email : "johndoe@email.com"}
+            </span>
             <img src="src/assets/icons/mail.svg" alt="" />
           </div>
           <div className="cvContactDetail">
-            <span className="cvContactItem">+57 3244924308</span>
+            <span className="cvContactItem">
+              {basicInfo.phoneNumber ? basicInfo.phoneNumber : "(123)-456-789"}
+            </span>
             <img src="src/assets/icons/phone.svg" alt="" />
           </div>
           <div className="cvContactDetail">
             <span className="cvContactItem">
-              <a href="" style={{ color: "var(--color-pire-white)" }}>
-                https://nicktechz.me
+              <a
+                href={basicInfo.website}
+                style={{ color: "var(--color-pire-white)" }}
+              >
+                {basicInfo.website ? basicInfo.website : "https://example.com"}
               </a>
             </span>
             <img src="src/assets/icons/globe.svg" alt="" />
@@ -33,25 +43,14 @@ export default function Cv({ basicInfo, onChange, keyChange }) {
         <section className="cvSection">
           <h3 className="cvSectionTitle">Biography</h3>
           <p className="cvSectionDetails">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum
-            nihil omnis debitis porro voluptate assumenda, impedit architecto
-            sint aliquam atque quos. Esse facere, aut eligendi molestiae
-            necessitatibus illum sequi maxime.
+            {basicInfo.bio
+              ? basicInfo.bio
+              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit lacus risus, id bibendum risus suscipit eu. In laoreet feugiat massa, in euismod eros aliquam at. Praesent luctus, lacus ut cursus pretium, massa nibh efficitur nisi, eget sollicitudin augue dolor sed elit. Nam nec luctus magna, vel condimentum nunc. Nullam vestibulum libero et convallis pharetra. Vivamus sed risus id nulla luctus vestibulum et nec massa. Morbi mollis non mauris a cursus. Quisque ultrices libero id metus lacinia, eget suscipit sapien tempus. Curabitur ullamcorper mauris vel placerat facilisis. Morbi at erat felis."}
           </p>
         </section>
         <section className="cvSection">
           <h3 className="cvSectionTitle">Educational experience</h3>
           <ul className="cvSectionDetails cvEducation">
-            <li className="cvCard">
-              <h4>Colegio Virtual Siglo XXI</h4>
-              <p>Grado de bachiller académico</p>
-              <p>2005 - 2024</p>
-            </li>
-            <li className="cvCard">
-              <h4>Colegio Virtual Siglo XXI</h4>
-              <p>Grado de bachiller académico</p>
-              <p>2005 - 2024</p>
-            </li>
             <li className="cvCard">
               <h4>Colegio Virtual Siglo XXI</h4>
               <p>Grado de bachiller académico</p>
@@ -73,21 +72,6 @@ export default function Cv({ basicInfo, onChange, keyChange }) {
                 Durante el trabajo en la empresa estuve encargado de la
                 elaboración y mantenimiento del sitio web.
               </p>
-              <p>2005 - 2024</p>
-            </li>
-            <li className="cvCard cvWorkCard">
-              <h4>Colegio Virtual Siglo XXI</h4>
-              <p>Grado de bachiller académico</p>
-              <p>2005 - 2024</p>
-            </li>
-            <li className="cvCard cvWorkCard">
-              <h4>Colegio Virtual Siglo XXI</h4>
-              <p>Grado de bachiller académico</p>
-              <p>2005 - 2024</p>
-            </li>
-            <li className="cvCard cvWorkCard">
-              <h4>Colegio Virtual Siglo XXI</h4>
-              <p>Grado de bachiller académico</p>
               <p>2005 - 2024</p>
             </li>
           </ul>

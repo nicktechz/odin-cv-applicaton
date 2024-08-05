@@ -1,5 +1,5 @@
 import "../styles/components/Configurator.css";
-import "../styles/components/Cv.css";
+
 import Button from "./Button";
 export default function Configurator({ basicInfo, onChange, keyChange }) {
   return (
