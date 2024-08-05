@@ -1,5 +1,7 @@
 # CV BUILDER APPLICATION
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b592ec80-fa1e-4530-ab7c-a5e029b67a7d/deploy-status)](https://app.netlify.com/sites/resumerio-nicktechz/deploys)
+
 This is an application that allows users to create a CV or resume by adding their personal, academic, and work experience information.
 
 For development, React was used as the main technology with Vite. The project involved practicing the use of `reactuseState()` both in local components and for updating the application state through props.
