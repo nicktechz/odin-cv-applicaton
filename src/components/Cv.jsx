@@ -18,13 +18,13 @@ export default function Cv({ basicInfo }) {
             <span className="cvContactItem">
               {basicInfo.email ? basicInfo.email : "johndoe@email.com"}
             </span>
-            <img src="src/assets/icons/mail.svg" alt="" />
+            <img src="/icons/mail.svg" alt="" />
           </div>
           <div className="cvContactDetail">
             <span className="cvContactItem">
               {basicInfo.phoneNumber ? basicInfo.phoneNumber : "(123)-456-789"}
             </span>
-            <img src="src/assets/icons/phone.svg" alt="" />
+            <img src="/icons/phone.svg" alt="" />
           </div>
           <div className="cvContactDetail">
             <span className="cvContactItem">
@@ -35,7 +35,7 @@ export default function Cv({ basicInfo }) {
                 {basicInfo.website ? basicInfo.website : "https://example.com"}
               </a>
             </span>
-            <img src="src/assets/icons/globe.svg" alt="" />
+            <img src="/icons/globe.svg" alt="" />
           </div>
         </div>
       </header>
@@ -47,34 +47,6 @@ export default function Cv({ basicInfo }) {
               ? basicInfo.bio
               : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit lacus risus, id bibendum risus suscipit eu. In laoreet feugiat massa, in euismod eros aliquam at. Praesent luctus, lacus ut cursus pretium, massa nibh efficitur nisi, eget sollicitudin augue dolor sed elit. Nam nec luctus magna, vel condimentum nunc. Nullam vestibulum libero et convallis pharetra. Vivamus sed risus id nulla luctus vestibulum et nec massa. Morbi mollis non mauris a cursus. Quisque ultrices libero id metus lacinia, eget suscipit sapien tempus. Curabitur ullamcorper mauris vel placerat facilisis. Morbi at erat felis."}
           </p>
-        </section>
-        <section className="cvSection">
-          <h3 className="cvSectionTitle">Educational experience</h3>
-          <ul className="cvSectionDetails cvEducation">
-            <li className="cvCard">
-              <h4>Colegio Virtual Siglo XXI</h4>
-              <p>Grado de bachiller académico</p>
-              <p>2005 - 2024</p>
-            </li>
-            <li className="cvCard">
-              <h4>Colegio Virtual Siglo XXI</h4>
-              <p>Grado de bachiller académico</p>
-              <p>2005 - 2024</p>
-            </li>
-          </ul>
-        </section>
-        <section className="cvSection">
-          <h3 className="cvSectionTitle">Work experience</h3>
-          <ul className="cvSectionDetails cvWork">
-            <li className="cvCard cvWorkCard">
-              <h4>Massa Mare - Full Stack Engineer</h4>
-              <p>
-                Durante el trabajo en la empresa estuve encargado de la
-                elaboración y mantenimiento del sitio web.
-              </p>
-              <p>2005 - 2024</p>
-            </li>
-          </ul>
         </section>
       </main>
     </section>

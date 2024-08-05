@@ -11,10 +11,10 @@ export default function Builder() {
   const [basicInfo, setBasicInfo] = useState(basicInfoData);
 
   const changeImageToMen = () => {
-    setBasicInfo({ ...basicInfo, img: "src/assets/icons/userMan.svg" });
+    setBasicInfo({ ...basicInfo, img: "/icons/userMan.svg" });
   };
   const changeImageToWomen = () => {
-    setBasicInfo({ ...basicInfo, img: "src/assets/icons/userWomen.svg" });
+    setBasicInfo({ ...basicInfo, img: "/icons/userWomen.svg" });
   };
 
   const changeFirstName = (e) => {

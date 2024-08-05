@@ -2,9 +2,8 @@ import { useState } from "react";
 
 export default function BasicInfoSettings({ basicInfo, basicInfoFunctions }) {
   const [collapse, setCollapse] = useState(true);
-  const iconDownPath = "src/assets/icons/chevron-down.svg";
-  const iconUpPath = "src/assets/icons/chevron-up.svg";
-  console.log(basicInfoFunctions);
+  const iconDownPath = "/icons/chevron-down.svg";
+  const iconUpPath = "/icons/chevron-up.svg";
 
   function collapseAccordion() {
     if (collapse) {
@@ -32,27 +31,23 @@ export default function BasicInfoSettings({ basicInfo, basicInfoFunctions }) {
             </span>
             <div style={{ display: "flex", gap: "8px" }}>
               <img
-                src="src/assets/icons/userMan.svg"
+                src="/icons/userMan.svg"
                 alt=""
                 width="80px"
                 style={{ cursor: "pointer" }}
                 onClick={basicInfoFunctions.changeImageToMen}
                 className={
-                  basicInfo.img === "src/assets/icons/userMan.svg"
-                    ? "active"
-                    : null
+                  basicInfo.img === "/icons/userMan.svg" ? "active" : null
                 }
               />
               <img
-                src="src/assets/icons/userWomen.svg"
+                src="/icons/userWomen.svg"
                 alt=""
                 width="80px"
                 style={{ cursor: "pointer" }}
                 onClick={basicInfoFunctions.changeImageToWomen}
                 className={
-                  basicInfo.img === "src/assets/icons/userWomen.svg"
-                    ? "active"
-                    : null
+                  basicInfo.img === "/icons/userWomen.svg" ? "active" : null
                 }
               />
             </div>

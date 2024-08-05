@@ -18,7 +18,7 @@ export default function Header() {
         <section className="headerFirstSection">
           <div>
             <a href="/">
-              <img src="src/assets/img/logo.svg" alt="" className="logo" />
+              <img src="/img/logo.svg" alt="" className="logo" />
             </a>
           </div>
           <ul>

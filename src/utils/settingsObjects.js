@@ -1,6 +1,6 @@
 export const basicInfo = {
   firstName: "",
-  img: "src/assets/icons/userMan.svg",
+  img: "/icons/userMan.svg",
   lastName: "",
   job: "",
   email: "",

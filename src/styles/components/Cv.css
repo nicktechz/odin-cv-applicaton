@@ -1,7 +1,7 @@
 .cvBox {
   width: 60%;
   background-color: #fff;
-  min-height: 500px;
+  min-height: 200px;
   border: 1px solid var(--color-white-darken1);
   border-radius: var(--border-radius-md);
   box-shadow: var(--box-shadow-black-sm);
