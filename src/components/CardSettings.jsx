@@ -45,7 +45,7 @@ export default function CardSettings({
                 src="src/assets/icons/userMan.svg"
                 alt=""
                 width="80px"
-                style={{}}
+                style={{ cursor: "pointer" }}
                 onClick={changeImageToMen}
                 className={
                   basicInfo.img === "src/assets/icons/userMan.svg"
@@ -57,7 +57,7 @@ export default function CardSettings({
                 src="src/assets/icons/userWomen.svg"
                 alt=""
                 width="80px"
-                style={{}}
+                style={{ cursor: "pointer" }}
                 onClick={changeImageToWomen}
                 className={
                   basicInfo.img === "src/assets/icons/userWomen.svg"
