@@ -4,22 +4,11 @@ import "../styles/components/Configurator.css";
 import "../styles/components/Cv.css";
 import Cv from "./Cv";
 import Configurator from "./Configurator";
+import { basicInfo as basicInfoData } from "../utils/settingsObjects";
+import { deleteWhiteSpaces } from "../utils/stringUtils";
 
 export default function Builder() {
-  const [basicInfo, setBasicInfo] = useState({
-    firstName: "",
-    img: "src/assets/icons/userMan.svg",
-    lastName: "",
-    job: "",
-    email: "",
-    phoneNumber: "",
-    website: "",
-    bio: "",
-  });
-
-  const deleteWhiteSpaces = (string) => {
-    return string.replace(/\s/g, "");
-  };
+  const [basicInfo, setBasicInfo] = useState(basicInfoData);
 
   const changeImageToMen = () => {
     setBasicInfo({ ...basicInfo, img: "src/assets/icons/userMan.svg" });
@@ -53,21 +42,25 @@ export default function Builder() {
     setBasicInfo({ ...basicInfo, bio: e.target.value });
   };
 
+  const basicInfoFunctions = {
+    changeImageToMen,
+    changeImageToWomen,
+    changeFirstName,
+    changeLastName,
+    changeJob,
+    changeEmail,
+    changePhone,
+    changeWebsite,
+    changeBio,
+  };
+
   return (
     <section className="builder">
       <section className="configurator">
         <h2 className="configuratorTitle">Customization:</h2>
         <Configurator
           basicInfo={basicInfo}
-          changeImageToMen={changeImageToMen}
-          changeImageToWomen={changeImageToWomen}
-          changeFirstName={changeFirstName}
-          changeLastName={changeLastName}
-          changeJob={changeJob}
-          changeEmail={changeEmail}
-          changePhone={changePhone}
-          changeWebsite={changeWebsite}
-          changeBio={changeBio}
+          basicInfoFunctions={basicInfoFunctions}
         />
       </section>
 

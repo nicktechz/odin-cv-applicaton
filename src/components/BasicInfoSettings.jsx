@@ -1,21 +1,11 @@
 import { useState } from "react";
 
-export default function CardSettings({
-  title,
-  basicInfo,
-  changeImageToMen,
-  changeImageToWomen,
-  changeFirstName,
-  changeLastName,
-  changeJob,
-  changeEmail,
-  changePhone,
-  changeWebsite,
-  changeBio,
-}) {
+export default function BasicInfoSettings({ basicInfo, basicInfoFunctions }) {
   const [collapse, setCollapse] = useState(true);
   const iconDownPath = "src/assets/icons/chevron-down.svg";
   const iconUpPath = "src/assets/icons/chevron-up.svg";
+  console.log(basicInfoFunctions);
+
   function collapseAccordion() {
     if (collapse) {
       setCollapse(false);
@@ -26,7 +16,7 @@ export default function CardSettings({
   return (
     <aside className="card">
       <div className="cardHeader">
-        <h3>{title}</h3>
+        <h3>Personal information</h3>
         <img
           src={!collapse ? iconDownPath : iconUpPath}
           alt=""
@@ -46,7 +36,7 @@ export default function CardSettings({
                 alt=""
                 width="80px"
                 style={{ cursor: "pointer" }}
-                onClick={changeImageToMen}
+                onClick={basicInfoFunctions.changeImageToMen}
                 className={
                   basicInfo.img === "src/assets/icons/userMan.svg"
                     ? "active"
@@ -58,7 +48,7 @@ export default function CardSettings({
                 alt=""
                 width="80px"
                 style={{ cursor: "pointer" }}
-                onClick={changeImageToWomen}
+                onClick={basicInfoFunctions.changeImageToWomen}
                 className={
                   basicInfo.img === "src/assets/icons/userWomen.svg"
                     ? "active"
@@ -74,7 +64,7 @@ export default function CardSettings({
               </label>
               <input
                 type="text"
-                onChange={changeFirstName}
+                onChange={basicInfoFunctions.changeFirstName}
                 value={basicInfo.firstName}
               />
             </div>
@@ -84,7 +74,7 @@ export default function CardSettings({
               </label>
               <input
                 type="text"
-                onChange={changeLastName}
+                onChange={basicInfoFunctions.changeLastName}
                 value={basicInfo.lastName}
               />
             </div>
@@ -93,13 +83,21 @@ export default function CardSettings({
             <label htmlFor="">
               Job: <span className="requiredIcon">*</span>
             </label>
-            <input type="text" value={basicInfo.job} onChange={changeJob} />
+            <input
+              type="text"
+              value={basicInfo.job}
+              onChange={basicInfoFunctions.changeJob}
+            />
           </div>
           <div className="inputBox">
             <label htmlFor="">
               Email: <span className="requiredIcon">*</span>
             </label>
-            <input type="text" onChange={changeEmail} value={basicInfo.email} />
+            <input
+              type="text"
+              onChange={basicInfoFunctions.changeEmail}
+              value={basicInfo.email}
+            />
           </div>
           <div className="inputBox">
             <label htmlFor="">
@@ -108,7 +106,7 @@ export default function CardSettings({
             <input
               type="tel"
               value={basicInfo.phoneNumber}
-              onChange={changePhone}
+              onChange={basicInfoFunctions.changePhone}
             />
           </div>
           <div className="inputBox">
@@ -118,7 +116,7 @@ export default function CardSettings({
             <input
               type="url"
               value={basicInfo.website}
-              onChange={changeWebsite}
+              onChange={basicInfoFunctions.changeWebsite}
             />
           </div>
           <div className="inputBox">
@@ -129,7 +127,7 @@ export default function CardSettings({
               name=""
               id=""
               value={basicInfo.bio}
-              onChange={changeBio}
+              onChange={basicInfoFunctions.changeBio}
             ></textarea>
           </div>
         </>
