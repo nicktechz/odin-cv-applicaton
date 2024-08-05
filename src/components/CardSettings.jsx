@@ -3,6 +3,8 @@ import { useState } from "react";
 export default function CardSettings({
   title,
   basicInfo,
+  changeImageToMen,
+  changeImageToWomen,
   changeFirstName,
   changeLastName,
   changeJob,
@@ -34,7 +36,38 @@ export default function CardSettings({
       </div>
       {collapse ? (
         <>
-          <div className="inputBox inputGroup" style={{ paddingTop: "24px" }}>
+          <div className="inputBox" style={{ paddingTop: "24px" }}>
+            <span style={{ marginBottom: "12px", display: "block" }}>
+              Gender:
+            </span>
+            <div style={{ display: "flex", gap: "8px" }}>
+              <img
+                src="src/assets/icons/userMan.svg"
+                alt=""
+                width="80px"
+                style={{}}
+                onClick={changeImageToMen}
+                className={
+                  basicInfo.img === "src/assets/icons/userMan.svg"
+                    ? "active"
+                    : null
+                }
+              />
+              <img
+                src="src/assets/icons/userWomen.svg"
+                alt=""
+                width="80px"
+                style={{}}
+                onClick={changeImageToWomen}
+                className={
+                  basicInfo.img === "src/assets/icons/userWomen.svg"
+                    ? "active"
+                    : null
+                }
+              />
+            </div>
+          </div>
+          <div className="inputBox inputGroup">
             <div>
               <label htmlFor="">
                 First name: <span className="requiredIcon">*</span>
@@ -49,7 +82,11 @@ export default function CardSettings({
               <label htmlFor="">
                 Last Name: <span className="requiredIcon">*</span>
               </label>
-              <input type="text" onChange={changeLastName} />
+              <input
+                type="text"
+                onChange={changeLastName}
+                value={basicInfo.lastName}
+              />
             </div>
           </div>
           <div className="inputBox">
@@ -62,11 +99,7 @@ export default function CardSettings({
             <label htmlFor="">
               Email: <span className="requiredIcon">*</span>
             </label>
-            <input
-              type="email"
-              value={basicInfo.email}
-              onChange={changeEmail}
-            />
+            <input type="text" onChange={changeEmail} value={basicInfo.email} />
           </div>
           <div className="inputBox">
             <label htmlFor="">

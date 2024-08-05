@@ -1,10 +1,10 @@
 import "../styles/components/Cv.css";
-export default function Cv({ basicInfo, onChange, keyChange }) {
+export default function Cv({ basicInfo }) {
   return (
     <section className="cvBox">
       <header className="cvHeader">
         <div className="cvHeaderBasicInfo">
-          <img src="src/assets/icons/userMan.svg" alt="" className="cvAvatar" />
+          <img src={basicInfo.img} alt="" className="cvAvatar" />
           <div>
             <h3>
               {basicInfo.firstName ? basicInfo.firstName : "John"}{" "}

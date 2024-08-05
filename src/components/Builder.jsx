@@ -8,6 +8,7 @@ import Configurator from "./Configurator";
 export default function Builder() {
   const [basicInfo, setBasicInfo] = useState({
     firstName: "",
+    img: "src/assets/icons/userMan.svg",
     lastName: "",
     job: "",
     email: "",
@@ -16,23 +17,37 @@ export default function Builder() {
     bio: "",
   });
 
+  const deleteWhiteSpaces = (string) => {
+    return string.replace(/\s/g, "");
+  };
+
+  const changeImageToMen = () => {
+    setBasicInfo({ ...basicInfo, img: "src/assets/icons/userMan.svg" });
+  };
+  const changeImageToWomen = () => {
+    setBasicInfo({ ...basicInfo, img: "src/assets/icons/userWomen.svg" });
+  };
+
   const changeFirstName = (e) => {
-    setBasicInfo({ ...basicInfo, firstName: e.target.value });
+    setBasicInfo({
+      ...basicInfo,
+      firstName: deleteWhiteSpaces(e.target.value),
+    });
   };
   const changeLastName = (e) => {
-    setBasicInfo({ ...basicInfo, lastName: e.target.value });
+    setBasicInfo({ ...basicInfo, lastName: deleteWhiteSpaces(e.target.value) });
   };
   const changeJob = (e) => {
     setBasicInfo({ ...basicInfo, job: e.target.value });
   };
   const changeEmail = (e) => {
-    setBasicInfo({ ...basicInfo, email: e.target.value });
+    setBasicInfo({ ...basicInfo, email: deleteWhiteSpaces(e.target.value) });
   };
   const changePhone = (e) => {
     setBasicInfo({ ...basicInfo, phoneNumber: e.target.value });
   };
   const changeWebsite = (e) => {
-    setBasicInfo({ ...basicInfo, website: e.target.value });
+    setBasicInfo({ ...basicInfo, website: deleteWhiteSpaces(e.target.value) });
   };
   const changeBio = (e) => {
     setBasicInfo({ ...basicInfo, bio: e.target.value });
@@ -44,6 +59,8 @@ export default function Builder() {
         <h2 className="configuratorTitle">Customization:</h2>
         <Configurator
           basicInfo={basicInfo}
+          changeImageToMen={changeImageToMen}
+          changeImageToWomen={changeImageToWomen}
           changeFirstName={changeFirstName}
           changeLastName={changeLastName}
           changeJob={changeJob}
@@ -54,11 +71,7 @@ export default function Builder() {
         />
       </section>
 
-      <Cv
-        basicInfo={basicInfo}
-        changeFirstName={changeFirstName}
-        changeLastName={changeLastName}
-      />
+      <Cv basicInfo={basicInfo} />
     </section>
   );
 }
