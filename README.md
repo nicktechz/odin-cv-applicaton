@@ -2,7 +2,7 @@
 
 This is an application that allows users to create a CV or resume by adding their personal, academic, and work experience information.
 
-For development, React was used as the main technology with Vite. The project involved practicing the use of useState() both in local components and for updating the application state through props.
+For development, React was used as the main technology with Vite. The project involved practicing the use of `reactuseState()` both in local components and for updating the application state through props.
 
 ## Tech Stack
 
